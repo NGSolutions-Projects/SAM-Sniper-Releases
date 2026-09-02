@@ -10,6 +10,17 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.1.1] - 2026-09-02
+
+### Fixed
+
+- **The line under RESULTS was cut off at the start.** With a long status it
+  grew wider than the window and spilled off both edges, so "Retrieval - Fail:
+  ..." appeared as "eval - Fail: ...". It now wraps, and re-wraps as you resize.
+- **The Deadline column fell off the right of the results table**, with no way
+  to scroll to it - the one column the table is sorted by. The columns now fit
+  the window, and Title and Agency stretch into any extra width.
+
 ## [1.1.0] - 2026-09-02
 
 ### Changed
@@ -185,6 +196,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.1.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.1.1
 [1.1.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.1.0
 [1.0.9]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.9
 [1.0.8]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.8
