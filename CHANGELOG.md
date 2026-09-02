@@ -10,6 +10,20 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.0.2] - 2026-09-01
+
+### Fixed
+
+- Switching between light and dark mode no longer clears the Get Set Up form.
+  The API key, results address and app password you had typed are kept.
+- Switching theme no longer resets your search. Keywords, codes, states, the
+  date window and the new-since-last-run tick all survive, and a search you had
+  edited is no longer reverted to the last saved version.
+- Switching theme while looking at your results no longer closes them with an
+  unexpected-error message.
+- The VALID / FAILED marks on the Running checks screen now repaint when you
+  change theme, instead of staying in the previous theme's colours.
+
 ## [1.0.1] - 2026-09-01
 
 First public release. Version 1.0.0 was built and tested but never published,
@@ -47,4 +61,5 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.0.2]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.2
 [1.0.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.1
