@@ -10,6 +10,26 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.1.0] - 2026-09-02
+
+### Changed
+
+- **The requests-left figure now comes from SAM.gov, not from counting.**
+  SAM.gov reports how many requests remain on every single response, and the
+  app now reads and shows that. Counting locally could never be right: the same
+  key used on another computer, or by anything else, spends the same allowance
+  without this app seeing any of it. When the real figure is known the word
+  "about" disappears, because it is no longer a guess.
+- The real daily limit is taken from SAM.gov too, rather than assumed from the
+  account type.
+
+### Fixed
+
+- **A search that ran out of allowance left the counter claiming requests were
+  left.** The status line would say the allowance was used up while the corner
+  of the screen still offered six - only the startup check reacted to a refusal,
+  and searches did not.
+
 ## [1.0.9] - 2026-09-02
 
 ### Fixed
@@ -165,6 +185,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.1.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.1.0
 [1.0.9]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.9
 [1.0.8]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.8
 [1.0.7]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.7
