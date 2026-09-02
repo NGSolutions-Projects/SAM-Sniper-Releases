@@ -10,6 +10,15 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.0.8] - 2026-09-01
+
+### Changed
+
+- **One update window, however you get to it.** `File > Check for updates...`
+  used to open a different dialog from the one the startup check uses. Both now
+  show the same window, with links to the release notes and to skip a version
+  you would rather not take.
+
 ## [1.0.7] - 2026-09-01
 
 ### Added
@@ -139,6 +148,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.0.8]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.8
 [1.0.7]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.7
 [1.0.6]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.6
 [1.0.5]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.5
