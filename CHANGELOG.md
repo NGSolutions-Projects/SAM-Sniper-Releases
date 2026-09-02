@@ -10,6 +10,38 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.3.0] - 2026-09-02
+
+### Added
+
+- **An Overview screen**, and it is where the app now opens. It shows how much
+  of today's SAM.gov allowance is left, how much has been used over the last
+  seven days, what your last search matched and how much of that was new, when
+  the next scheduled run is, and the last five runs including any that failed.
+  Nothing on it is estimated; where a figure is a guess, it says so.
+- **Every search is now remembered** - what it matched, how much was new, and
+  whether it finished. That survives closing the app, which is what lets the
+  Overview tell you anything on opening.
+
+### Changed
+
+- **A new look.** Dark or light, rounded cards and buttons, a green accent, and
+  a title bar that matches the rest of the window instead of staying white.
+- **The menu bar is gone**, replaced by a navigation column down the left with
+  everything the File menu held, visible without opening anything. It stays out
+  of the way during first-time setup, which is a straight line with one way
+  forward.
+- Screen headings are no longer in capitals.
+- The results table lays its columns out from the width it is actually given,
+  so the Deadline column cannot be pushed off the edge at any window size.
+- The results table now sits in a card rather than a box inside a box.
+
+### Fixed
+
+- **The window icon and the logo were missing** when running from source, after
+  the code was reorganised in 1.2.0. The installed application was never
+  affected, but three tests now cover it.
+
 ## [1.2.0] - 2026-09-02
 
 ### Changed
@@ -227,6 +259,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.3.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.3.0
 [1.2.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.2.0
 [1.1.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.1.1
 [1.1.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.1.0
