@@ -4,7 +4,8 @@ Downloads and release notes for **S.A.M Sniper**, a Windows desktop application
 that pulls federal contract opportunities from the SAM.gov Get Opportunities
 API, filters them, and delivers a formatted Excel + CSV digest by email.
 
-**[Download the latest version](../../releases/latest)**
+**[Download the latest version](../../releases/latest)**  ·
+[What's changed](CHANGELOG.md)
 
 ## Installing
 
