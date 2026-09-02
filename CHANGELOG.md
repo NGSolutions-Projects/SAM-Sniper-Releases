@@ -10,6 +10,21 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.0.3] - 2026-09-01
+
+### Fixed
+
+- Updating no longer ends in "Security validation failure: parent process has
+  different executable!". The running app was passing its own private
+  PyInstaller markers down to the installer, which handed them to the freshly
+  installed copy it relaunched; that copy then believed it had been started by
+  something it had not. Both sides now clear them.
+- Updating no longer asks you to accept the Terms of Use again. The setup
+  wizard skips its licence page when you have already accepted the current
+  Terms, and the Terms now carry their own version number rather than the
+  application's - so a patch release cannot make them look changed when they
+  are not. You will be asked again only if the wording actually changes.
+
 ## [1.0.2] - 2026-09-01
 
 ### Fixed
@@ -61,5 +76,6 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.0.3]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.3
 [1.0.2]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.2
 [1.0.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.1
