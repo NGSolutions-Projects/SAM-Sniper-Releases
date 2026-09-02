@@ -10,6 +10,22 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.0.6] - 2026-09-01
+
+### Fixed
+
+- **Updating could leave a setup window stuck open for ever.** Setup found the
+  app still closing, asked what to do about it, and waited on a dialog a silent
+  update has no way to answer - holding its own file locked. Setup now closes
+  the app itself instead of asking.
+- **A stuck update blocked every update after it.** The installer was always
+  saved to the same filename, so a locked leftover could not be replaced. Each
+  download is now named for its version, falls back to a fresh name if that one
+  is somehow in use, and older ones are tidied up afterwards.
+- The failure was reported as a raw `PermissionError`. The cleanup that runs
+  when a download fails could itself fail on the locked file, replacing the
+  readable message with its own.
+
 ## [1.0.5] - 2026-09-01
 
 ### Added
@@ -112,6 +128,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.0.6]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.6
 [1.0.5]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.5
 [1.0.4]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.4
 [1.0.3]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.3
