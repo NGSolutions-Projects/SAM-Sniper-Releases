@@ -10,6 +10,37 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.2.0] - 2026-09-02
+
+### Changed
+
+- **The interface is finished.** Scrollbars, tickboxes, dropdown arrows and the
+  ring around a selected box were still being drawn by Windows in its own grey
+  and blue; they now match the rest of the application, in both light and dark.
+- **Tickboxes show a tick.** They used to show a small cross, which reads as a
+  refusal on a box whose job is to turn something on.
+- **Dialogs open over the window you opened them from**, centred, instead of
+  wherever Windows decided to put them - which on a second monitor was often
+  not the screen you were looking at. They are also a consistent size.
+- Every page now lines up with every other. The margin was six pixels wider on
+  two of the five screens, so headings shifted sideways as you moved through.
+- The checks screen numbered its block 4, the same as the last block of Get Set
+  Up. It is 5.
+
+### Fixed
+
+- **Email settings was cutting off its last two fields.** The Port box and the
+  STARTTLS tickbox were below the bottom of the window with no way to reach
+  them. The form scrolls now.
+- **The results table stopped clipping.** "Total Small Business" and "DEPT OF
+  VETERANS AFFAIRS" were both cut short.
+- New notices in the table are marked with a tint rather than filled solid, so
+  a result set that is mostly new no longer looks entirely selected, and the
+  rows alternate shade to make a wide table easier to follow.
+- On an installation you do not have permission to write to, the reports and
+  the cache now fall back to your home folder, as the settings file already
+  did. The two disagreed, and only one of them coped.
+
 ## [1.1.1] - 2026-09-02
 
 ### Fixed
@@ -196,6 +227,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.2.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.2.0
 [1.1.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.1.1
 [1.1.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.1.0
 [1.0.9]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.9
