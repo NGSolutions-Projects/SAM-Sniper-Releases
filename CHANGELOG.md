@@ -10,6 +10,23 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.0.9] - 2026-09-02
+
+### Fixed
+
+- **The request counter now agrees with SAM.gov.** Two things were wrong. The
+  check made on every launch to verify your key spends a real request, and the
+  counter never saw it - so it under-reported by one per launch. And the count
+  rolled over at local midnight while SAM.gov's allowance resets at midnight
+  UTC, so for the seven hours between the two it reported the previous day's
+  usage against an allowance that had already refilled.
+- The counter now also says **when the allowance comes back** in your own time,
+  because midnight UTC lands mid-afternoon or evening locally and is not the
+  midnight anyone would assume.
+- When SAM.gov reports the allowance exhausted, the counter shows none left
+  rather than whatever this computer happened to have counted - the same key
+  used anywhere else spends the same allowance.
+
 ## [1.0.8] - 2026-09-01
 
 ### Changed
@@ -148,6 +165,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.0.9]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.9
 [1.0.8]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.8
 [1.0.7]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.7
 [1.0.6]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.6
