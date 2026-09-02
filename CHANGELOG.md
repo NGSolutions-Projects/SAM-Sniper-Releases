@@ -10,6 +10,17 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.0.7] - 2026-09-01
+
+### Added
+
+- **Updates now show a progress window** instead of happening invisibly. It
+  carries the S.A.M Sniper mark and name, a percentage, and a line saying what
+  is going on - downloading, checking the download, installing. It stays on
+  screen through the install and closes itself when the new version takes
+  over, so the app is never simply gone for half a minute with nothing to
+  explain it. If something fails, the window says so rather than vanishing.
+
 ## [1.0.6] - 2026-09-01
 
 ### Fixed
@@ -128,6 +139,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.0.7]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.7
 [1.0.6]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.6
 [1.0.5]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.5
 [1.0.4]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.4
