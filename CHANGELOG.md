@@ -10,6 +10,34 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.0.5] - 2026-09-01
+
+### Added
+
+- **Cancel a running search.** RETRIEVE turns into CANCEL while a search is
+  going. It stops between pages, so it can take a moment on a slow reply, and
+  nothing is saved or emailed.
+- `File > Open exports folder`, so you can get to your reports without running
+  a search first.
+- `File > Settings > Forget saved settings...`, which clears the stored API
+  key, mail password, address, filters and saved searches from this computer.
+  Exported reports are left alone.
+
+### Changed
+
+- **The startup key check no longer spends a request on every launch.** It is
+  reused for six hours instead. On a non-federal key that is the difference
+  between five launches costing five of your ten daily requests and costing
+  one. A failed check is never reused, changing your key discards it, and
+  TRY AGAIN always asks SAM.gov again.
+
+### Fixed
+
+- The window can now be made small enough for a 1366x768 laptop. Its minimum
+  height used to be taller than such a screen, which pushed CONTINUE and
+  RETRIEVE below the bottom edge where they could not be clicked. Get Set Up
+  scrolls now, as the search screen already did.
+
 ## [1.0.4] - 2026-09-01
 
 ### Changed
@@ -84,6 +112,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.0.5]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.5
 [1.0.4]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.4
 [1.0.3]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.3
 [1.0.2]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.2
