@@ -10,6 +10,14 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.0.4] - 2026-09-01
+
+### Changed
+
+- Updates install silently. The app closes, installs in the background and
+  reopens itself - no setup wizard, no pages to click through, and no licence
+  page. You still confirm once, in the app, before anything is downloaded.
+
 ## [1.0.3] - 2026-09-01
 
 ### Fixed
@@ -76,6 +84,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.0.4]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.4
 [1.0.3]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.3
 [1.0.2]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.2
 [1.0.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.0.1
