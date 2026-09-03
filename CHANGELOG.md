@@ -10,6 +10,30 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.4.1] - 2026-09-02
+
+### Fixed
+
+- **Opening the app was spending a request, every time, once the allowance ran
+  out.** The startup key check remembers a good result for six hours, but never
+  remembered a failure - so from the moment you ran out, each launch spent
+  another request being told the same thing, and that ate into the next day.
+  When SAM.gov has already reported nothing left and the reset has not passed,
+  it no longer asks.
+- **Buttons had a small square of the wrong colour at each corner.** The
+  rounded corners are transparent, and what showed through them was the wrong
+  background. Every button now takes the colour of whatever it is actually
+  sitting on.
+- **RETRIEVE could be pushed off the right-hand edge** when the window was
+  narrowed - the text beside it claimed the space first. The controls keep
+  theirs now and the text wraps, and the minimum window width accounts for the
+  navigation column.
+- **Switching between light and dark left an open Settings dialog half
+  converted** - white panels with dark text - until it was closed and reopened.
+  It converts in place. Dialogs also get the dark title bar the main window has.
+- **A custom mail server could not be saved on its own.** There is a SAVE
+  SERVER button beside the name now, and a FORGET for taking one back out.
+
 ## [1.4.0] - 2026-09-02
 
 ### Added
@@ -293,6 +317,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.4.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.1
 [1.4.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.0
 [1.3.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.3.0
 [1.2.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.2.0
