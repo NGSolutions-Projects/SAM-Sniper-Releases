@@ -10,6 +10,23 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.5.1] - 2026-09-02
+
+### Fixed
+
+- **Switching between light and dark now changes everything at once.** It used
+  to travel across the window a piece at a time, taking about a second. One
+  event handler was firing for every widget in the application and forcing a
+  full repaint each time; and the whole screen was being rebuilt to change its
+  colours rather than simply recoloured. It is about forty milliseconds now,
+  in a single pass, and nothing you have typed is disturbed by it.
+
+### Changed
+
+- **Reopening after an update is quicker.** The installer now tells the
+  application it is a restart, so it skips the loading screen it does not need
+  and does not check for the update it has just finished installing.
+
 ## [1.5.0] - 2026-09-02
 
 ### Changed
@@ -354,6 +371,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.5.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.5.1
 [1.5.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.5.0
 [1.4.2]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.2
 [1.4.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.1
