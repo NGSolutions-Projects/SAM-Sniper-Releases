@@ -10,6 +10,61 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.6.0] - 2026-09-03
+
+### Added
+
+- **Amendment tracking.** The report now marks an opportunity that has been
+  re-posted, or whose response deadline has moved, since you last saw it -
+  in its own column, and there is a tick box to narrow a search to just
+  those. It costs nothing: the comparison is against what the last run saved.
+- **"Can I bid on this?"** Tell it which set-aside programmes your firm is in
+  (8(a), SDVOSB, VOSB, WOSB, EDWOSB, HUBZone, small business) under
+  Settings, General. Each opportunity is then marked Yes, No, or Maybe -
+  full-and-open always counts as Yes - and you can filter to only the ones
+  you can compete for.
+- **Search near a place.** A "Near a location" filter takes a ZIP code and a
+  radius and keeps only the opportunities whose place of performance is that
+  close. SAM.gov itself can only filter by whole state.
+- **A second chart on the overview** showing how many listings your searches
+  have turned up each day, next to the one for requests spent.
+- **Custom posted-date range, whole-word matching, a sort control, and a
+  "hide closed" switch** on the search screen. The program could already do
+  all of these; now you can set them.
+- **Refresh the NAICS and PSC code tables** from Settings, General, without
+  waiting for an application update. The official editions change every few
+  years.
+- **Automatic mail setup for company addresses.** If your address is on
+  Microsoft 365 or Google Workspace under your own domain, it now recognises
+  that and fills in the mail server for you.
+
+### Changed
+
+- **"Closing within N days" actually works now.** SAM.gov only filters by the
+  date a notice was posted, so the old behaviour was to fetch the last day or
+  two of postings and keep the few that also closed soon - which found almost
+  nothing. It now looks back far enough to find them.
+- **The overview charts are lines, not bars,** with a labelled scale, and
+  they read more clearly.
+- **With "Remember me" on, the whole settings file is now encrypted** to your
+  Windows account - your saved searches and recipients, not only the two
+  passwords. With it off, nothing sensitive is written at all.
+- **A scheduled daily digest now tells you when an update is out.** A machine
+  that only runs the digest never opens the application, so it never saw the
+  update notice; there is a line in the email now.
+- Spreadsheet columns in the report widen to fit their contents.
+
+### Fixed
+
+- **The miscoloured corners on the cards** (the panels themselves, after the
+  earlier fixes to the buttons and boxes inside them).
+
+### Removed
+
+- Dead code behind a screen-state feature that nothing had used since the
+  theme switch stopped rebuilding screens.
+
+
 ## [1.5.1] - 2026-09-02
 
 ### Fixed
@@ -371,6 +426,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.6.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.6.0
 [1.5.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.5.1
 [1.5.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.5.0
 [1.4.2]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.2
