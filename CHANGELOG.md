@@ -10,6 +10,40 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.4.0] - 2026-09-02
+
+### Added
+
+- **Custom mail servers can be named and kept.** Pick "Custom Mail Server",
+  enter the SMTP server and port, tick STARTTLS or not, and give it a name. It
+  appears in the list beside Gmail and Outlook next time instead of being
+  retyped.
+
+### Changed
+
+- **Moving between screens is fourteen times faster** - a round trip between
+  Overview and Search went from about 2.5 seconds to under 0.2. The search
+  screen is also kept between visits now, so wandering off to the Overview no
+  longer discards filters you were part way through typing.
+- **Everything configurable is behind one Settings entry**, with tabs down the
+  left: General, Email, Exports and Scheduled run. The left-hand column is now
+  Overview, Search, Settings, Open exports folder, About, Terms of Use, Exit.
+- **The server fields are filled in and greyed out for known providers.** A
+  provider's host, port and encryption are facts rather than preferences, and
+  typing over them only breaks sending. Choose Custom Mail Server to enter your
+  own; STARTTLS is then set from the port and left yours to change.
+- Dark mode and the automatic-update tickbox moved to Settings > General.
+
+### Removed
+
+- **"Check for updates" is gone from the left-hand column.** The loading screen
+  already checks every time the application starts, so the button was offering
+  to do something already done. There is still a CHECK NOW in Settings >
+  General.
+- **"Forget saved settings" is gone from the left-hand column** and is in
+  Settings > General. Erasing your API key, mail password and every saved
+  search should not sit next to the search button.
+
 ## [1.3.0] - 2026-09-02
 
 ### Added
@@ -259,6 +293,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.4.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.0
 [1.3.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.3.0
 [1.2.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.2.0
 [1.1.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.1.1
