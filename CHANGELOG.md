@@ -10,6 +10,31 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.5.0] - 2026-09-02
+
+### Changed
+
+- **Starting the application is about six times faster** - roughly two and a
+  quarter seconds down to a third of a second. Most of that was never in the
+  program: the way it was packaged made it unpack itself into a temporary
+  folder every single time it was opened. It no longer does.
+- **The loading screen no longer pads itself out.** It spent nearly a second
+  and a half showing progress for work that takes a fifth of a millisecond.
+- **Searches with several NAICS or PSC codes now run their queries side by
+  side** instead of one after another. On a twelve-code search that is the
+  difference between about nine seconds of waiting and about one. It makes
+  exactly the same number of requests - that is what your daily allowance
+  counts - it just stops queueing them.
+- Two libraries that together cost a quarter of the startup are now loaded only
+  when they are actually needed - the spreadsheet writer when a report is
+  written, and the network library on the first request.
+
+### Removed
+
+- Dead code: two status values nothing ever used, an unused scheduling
+  variant, and two menu handlers left behind when the settings moved into one
+  dialog.
+
 ## [1.4.2] - 2026-09-02
 
 ### Fixed
@@ -329,6 +354,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.5.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.5.0
 [1.4.2]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.2
 [1.4.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.1
 [1.4.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.0
