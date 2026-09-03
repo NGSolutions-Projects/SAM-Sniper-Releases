@@ -10,6 +10,18 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.4.2] - 2026-09-02
+
+### Fixed
+
+- **The miscoloured corners are actually gone this time.** 1.4.1 fixed them on
+  buttons and stopped there; the text boxes, the dropdowns, and the buttons on
+  the Terms of Use sheet all had the same problem. Every one of them now takes
+  the colour of whatever it is sitting on.
+- **Windows was drawing a coloured line around every window** - your accent
+  colour, because the app set the title bar colour but never the border. It
+  matches the window now.
+
 ## [1.4.1] - 2026-09-02
 
 ### Fixed
@@ -317,6 +329,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.4.2]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.2
 [1.4.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.1
 [1.4.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.4.0
 [1.3.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.3.0
