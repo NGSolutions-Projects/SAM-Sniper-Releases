@@ -10,6 +10,37 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.7.0] - 2026-09-04
+
+### Added
+
+- **Keep the opportunities you are working on.** Select rows on the results
+  screen and press TRACK SELECTED. They move to a new Pipeline screen, where
+  each one has a stage - lead, drafting, awaiting a reply, needs attention, in
+  progress, amended, closed - and you set it as the work moves.
+- **An amendment finds you.** If a search turns up a change to something you
+  are tracking, that opportunity moves to Amended by itself, its saved copy is
+  brought up to date, and a count appears beside Pipeline. You do not have to
+  spot it in a column.
+- **Draft a message from an opportunity.** Pick a template, and it is filled in
+  from the notice and from your own details. Anything it could not fill is
+  named rather than sent blank. It sends from the same account your results
+  come from, and the opportunity moves to awaiting a reply.
+- **Your own details, and your own templates**, under Settings > Drafts. Four
+  templates are included; edit one and yours is used instead, reset it and the
+  original comes back.
+- **Optional: have a notice read for you.** With an Anthropic API key of your
+  own in Settings > Drafts, the Pipeline can summarise an opportunity, list
+  what it asks for, and judge whether it suits your firm. It is off until you
+  enter a key, every use is charged to your own account, and nothing runs
+  unless you press one of those buttons.
+- **A "needing attention" figure on the Overview**, once you are tracking
+  anything.
+
+### Changed
+
+- The results table lets you select more than one row at a time.
+
 ## [1.6.1] - 2026-09-04
 
 ### Fixed
@@ -438,6 +469,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.7.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.7.0
 [1.6.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.6.1
 [1.6.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.6.0
 [1.5.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.5.1
