@@ -10,6 +10,18 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.6.1] - 2026-09-04
+
+### Fixed
+
+- **The overview no longer prints the same number twice.** When a week ended
+  on its busiest day, the matched-listings chart labelled that day's total a
+  second time, lower down and on top of the line. The scale already shows it.
+- **Leaving a screen no longer leaves work running behind it.** Typing an
+  email address on your own domain starts a short look-up; moving on before it
+  finished left it running with nothing to report to. The same was true of the
+  loading screen, the allowance countdown and the three progress dialogs.
+
 ## [1.6.0] - 2026-09-03
 
 ### Added
@@ -426,6 +438,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.6.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.6.1
 [1.6.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.6.0
 [1.5.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.5.1
 [1.5.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.5.0
