@@ -10,6 +10,70 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.9.7] - 2026-09-08
+
+Everything since 1.7.0. The versions between were tested privately and not
+published here.
+
+### Added
+
+- **A fit score, 0-100, on every result.** Deterministic and explainable - it
+  matches concepts rather than keywords, so "continuity of operations" and
+  "business continuity" count as the same thing, and every point has a reason
+  attached. No model, no network, no cost per use.
+- **Five priority piles.** Every result is sorted into act now, respond,
+  review, watch or skip, so a long list has an order to work through.
+- **Facts read out of the notice text** - questions deadline, estimated value,
+  contract term, pre-bid conference and how to submit - where the search
+  fetched the full text.
+- **Sort and filter on the Pipeline.** Click any heading to sort by it, click
+  again to reverse. Filter to one stage and the rest are hidden. Select
+  several opportunities at once.
+- **Export.** Everything tracked, just what you selected, or one stage at a
+  time - as a workbook, in the exports folder, which opens when it is written.
+  Nothing here is emailed.
+- **A historical report.** Every search on record broken down by keyword,
+  NAICS code, product/service code, agency, set-aside, notice type and state:
+  what keeps coming up for you, rather than what turned up today. This history
+  begins with this version.
+- **Double-click an opportunity to see everything known about it** - the score
+  and why it scored that, the facts off the notice, who to contact, and its
+  full history. The link to SAM.gov is a button in that window.
+- **Choose which model the optional "read it for me" help uses**, with the
+  rough cost per notice on each choice, and see what each use will cost before
+  it runs and what it actually cost with the answer.
+- **Answer those questions for free instead.** Copy the question to your
+  clipboard, answer it in claude.ai, and paste the answer back against the
+  opportunity. No API key needed and nothing charged.
+
+### Changed
+
+- **Five workflow stages instead of seven.** "Awaiting reply" and "Needs
+  attention" are now both "In progress" - all three meant the same thing on
+  the board. Anything already tracked moves over by itself and keeps its
+  history.
+- **The workbook reads as a report.** Uniform alignment, the fit score colour
+  coded from red through to dark green, working links, dates as 11 SEP 2026,
+  "N/A" instead of blank cells, and an Office column that names the office
+  rather than only its city.
+
+### Fixed
+
+- **A failed search could overwrite a good export.** Two searches in the same
+  minute wrote to the same filename, so a search that hit the daily request
+  limit and matched nothing could replace a digest written moments earlier.
+  Report names are now always unique, and a search that fails writes no report
+  at all.
+- **Equipment no longer reads as a strong fit.** A notice buying firefighting
+  equipment scored 78 out of 100 because "emergency management" was in its
+  title. The product/service code says whether a notice buys goods or
+  services, and that is now part of the score.
+- **A damaged file no longer stops the application starting**, and one that
+  cannot be saved says why rather than "an unexpected error".
+- **Clearer failures from the optional help** - an account with no credit is
+  reported as exactly that, rather than as a problem with your key.
+- Columns and dropdown lists no longer cut their own contents off.
+
 ## [1.7.0] - 2026-09-04
 
 ### Added
@@ -469,6 +533,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.9.7]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.9.7
 [1.7.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.7.0
 [1.6.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.6.1
 [1.6.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.6.0
