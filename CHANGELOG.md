@@ -10,6 +10,46 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.10.0] - 2026-09-24
+
+Everything since 1.9.7, including 1.9.8, which was tested privately and not
+published here.
+
+### Added
+
+- **Recompetes.** A new screen listing contracts whose period of performance
+  ends in the next three to eighteen months - who holds the work, what it is
+  worth, which agency buys it and when it runs out. That is the window in which
+  you can still talk to the agency; by the time a solicitation is posted, the
+  people already positioned have been doing so for a year. **It uses none of
+  your SAM.gov requests.** The data comes from USAspending.gov, which needs no
+  key and publishes no limit.
+- **Who has held work like this**, in the window that opens when you
+  double-click an opportunity - recent awards under the same NAICS code at the
+  same agency, with the value and end date of each.
+- **Documents.** An opportunity's attachments are now listed, where before they
+  were not recorded at all. Each opens in your browser when you ask for it,
+  because each costs one SAM.gov request.
+- **Sort results by priority or by fit score.** Both were worked out for every
+  result and could not be sorted on.
+
+### Changed
+
+- **The number of full notices a search reads now follows the allowance SAM.gov
+  actually reports**, rather than one assumed from your account type. If your
+  key is granted more requests, searches will read more notice text on their
+  own - which is what fills the questions-due, value, contract-term, pre-bid,
+  submission and requirements columns.
+
+### Fixed
+
+- **A damaged tracked opportunity could stop the application starting**, and a
+  damaged one could hide every other opportunity you were tracking. Either now
+  skips the damaged record and keeps the rest.
+- **An update could be saved outside its download folder** if a release's file
+  were named to do so. It now always lands where the application decides.
+- Several smaller fixes to how exports and the Pipeline window read.
+
 ## [1.9.7] - 2026-09-08
 
 Everything since 1.7.0. The versions between were tested privately and not
@@ -533,6 +573,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.10.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.10.0
 [1.9.7]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.9.7
 [1.7.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.7.0
 [1.6.1]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.6.1
