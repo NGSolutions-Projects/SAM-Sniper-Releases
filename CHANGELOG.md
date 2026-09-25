@@ -10,6 +10,35 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.12.0] - 2026-09-25
+
+### Added
+
+- **Grants.** A new screen that searches Grants.gov for federal grants and
+  cooperative agreements using a saved search's keywords. Free, no key.
+- **Teaming partners.** A new screen that finds businesses registered in
+  SAM.gov by NAICS code, state and certification (SDVOSB, 8(a), HUBZone, WOSB
+  and more). The first search downloads SAM.gov's public list of registered
+  businesses, about 150 MB, once a month. Free, no key.
+- **Documents for any notice.** The details window offers VIEW ON SAM.GOV
+  (free) and LOAD DOCUMENTS (one SAM.gov request, remembered afterwards).
+
+### Changed
+
+- **A SAM.gov key is now optional.** Searching works without one. The app asks
+  for a key only when you use something that needs it.
+- **Searches are much faster**: about 1 second for titles, about 3 for full
+  text. The first search after each new daily file takes about 20 seconds
+  while it prepares the file.
+- **Full-text search ignores standard contract wording**, such as clause
+  titles and registration boilerplate, so it stops matching notices that
+  only mention your keywords in fine print. Terms typed in capitals, like
+  COOP, match only as whole words.
+
+### Fixed
+
+- The Recompetes screen now fills in the NAICS codes from your saved searches.
+
 ## [1.11.0] - 2026-09-24
 
 ### Changed
@@ -599,6 +628,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.12.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.12.0
 [1.11.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.11.0
 [1.10.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.10.0
 [1.9.7]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.9.7
