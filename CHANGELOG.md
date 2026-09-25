@@ -10,6 +10,32 @@ changing how anything is used, a **minor** release adds features, and a
 
 _Nothing yet._
 
+## [1.11.0] - 2026-09-24
+
+### Changed
+
+- **Searching no longer uses your SAM.gov requests.** Every search now reads
+  SAM.gov's own daily file of every open opportunity - free, no key needed,
+  refreshed once a night - instead of asking the API. A search takes a few
+  seconds and uses none of your ten requests a day.
+- **Every result now has its full notice text**, so the questions-due, value,
+  contract-term, pre-bid, submission and requirements columns fill in for
+  every row, not just the first few.
+- **Each opportunity appears once.** SAM.gov lists every amended version of a
+  notice separately; only the latest is shown now, with its current deadline.
+- **The warnings on the search screen say what a search really costs.** The
+  old ones assumed every search used the API.
+- **If the daily file cannot be downloaded or read**, searches ask the API
+  exactly as before.
+
+### Added
+
+- **Include notices posted since last night's file.** A tick box under
+  Options, on by default. After reading the daily file, the search asks
+  SAM.gov for anything posted since - usually about two requests - and
+  updates anything that has changed. Scheduled email runs skip it: by morning,
+  yesterday is already in the file.
+
 ## [1.10.0] - 2026-09-24
 
 Everything since 1.9.7, including 1.9.8, which was tested privately and not
@@ -573,6 +599,7 @@ so its changes are folded in here.
 - Removed the superseded PowerShell installer and two stale module docstrings.
 
 [Unreleased]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases
+[1.11.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.11.0
 [1.10.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.10.0
 [1.9.7]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.9.7
 [1.7.0]: https://github.com/NGSolutions-Projects/SAM-Sniper-Releases/releases/tag/v1.7.0
